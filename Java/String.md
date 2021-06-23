@@ -29,7 +29,9 @@ String Pool이 있는 환경에서 String을 불변 객체로 만들면 장점�
 - 많은 사용자가 같은 String을 공유하는데 누군가 임의로 값을 변경하게 되면 다른 사용자들도 변경된 값을 사용하면서 오류가 발생할 위험을 방지할 수 있다.
 - 변경될 위험이 없기에 메모리에 String의 literal 객체 copy 하나만 저장하면 되서 메모리 공간 이용 효율이 높아진다. 이를 `interning`이라고 한다.
 - DB 패스워드나 토큰 키 등 문자열이 불변이면 외부에서 공격이 들어와도 방어할 수 있는 보안이 형성될 수 있다.
-- 멀티 쓰레드 환경에서 추가적인 synchronization 설정이 필요 없다. 
+- 멀티 쓰레드 환경에서 추가적인 synchronization 설정이 필요 없다.          
+
+[Java String Pool](https://www.baeldung.com/java-string-pool)
 
 <br>
 
@@ -38,6 +40,7 @@ interning이라는 단어는 처음 보는데...
 우리가 자주 쓰는 인턴의 개념으로도 쓰지만 "구금하다, 억제하다" 라는 의미도 있다고 한다.(왠지 서글퍼지는 이유는 뭘까...)
 어쨌든 자바 String에서 interning은 여기저기서 쓰이는 동일한 문자열을 메모리 내 한 공간에 저장해 공유한다는 의미다.
 Java 7부터 intern된 객체는 힙 메모리 내 지정된 공간에 저장된다고 한다. 이 공간의 크기는 고정되어 있어서 너무 많은 intern 객체를 저장하면 문제가 생긴다고 한다.         
+
 [intern이란](https://stackoverflow.com/questions/10578984/what-is-java-string-interning)
 
 결과적으로 String을 불변 객체로 만들어 문자열을 요청할 때마다 메모리 내 객체의 동일한 레퍼런스를 제공해 메모리 점유율을 낮추는데 의미가 있다.
@@ -50,4 +53,6 @@ Object는 String 문자열을 생성할 때 new() 연산자를 사용해 만드�
 
 literal은 String s = "..."; 방식으로 문자열을 선언한다.
 이 방식은 String이 intern이 되면서 기존에 있던 String 객체를 재활용할 수 있다.
-불필요하게 객체를 새로 생성할 필요 없이 기존 객체를 optimize 가능하기 때문에 literal 방식으로 사용하는 게 권장된다.
+불필요하게 객체를 새로 생성할 필요 없이 기존 객체를 optimize 가능하기 때문에 literal 방식으로 사용하는 게 권장된다.       
+
+[tring interal vs. String literal](https://stackoverflow.com/questions/3297867/difference-between-string-object-and-string-literal)

@@ -1,6 +1,6 @@
 # Serialization
 ## Serialization이란?
-객체를 byte Stream으로 변환한다. 그러면 변환된 데이터를 네트워크로 넘기거나 파일로 변환 또는 DB에 데이터로 보관하는 일이 가능하다.
+자료 구조나 객체를 네트워크를 통해 넘기거나 파일 또는 데이터 저장하기 위해 byte 형태로 변환하는 작업이다.
 
 클래스에 적용할 때는 `Serializable`을 implement하면 된다.
 Serializable 같은 경우도 ObjectInputStream과 ObjectOutputStream을 implement 받는다.

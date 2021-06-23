@@ -6,7 +6,7 @@ new로 선언한 다음 인스턴스.append() 함수를 이용해 문자열을 �
 <br>
 
 ## 차이
-StringBuffer는 synchronized를 지원하기 때문에 멀티 쓰레드 환경에서 thread-safe하다.
+StringBuffer는 `synchronized`를 지원하기 때문에 멀티 쓰레드 환경에서 thread-safe하다.
 StringBuilder는 synchronized 지원이 없기에 멀티 쓰레드 환경에서 위험하다.
 
 StringBuilder는 StringBuffer보다 나중에 나왔는데, 이유는 StringBuffer가 싱글 쓰레드 환경에서 쓰기엔 과한 기술이라는 점이다.

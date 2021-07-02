@@ -1,5 +1,16 @@
 # Thread
 ## Thread란?
+실행 기능으로 JVM이 여러 thread가 동시에(concurrent) 동작할 수 있도록 지원한다.
+쓰레드 시작 순서는 각 쓰레드에 부여된 우선순위에 따라 진행된다.
+
+<br>
+
+## Daemon thread
+백그라운드에서 도는 thread로 JVM이 관리한다.
+예시로는 garbage collection이 daemon thread이다.
+user thread와 daemon thread가 있는데, user thread가 다 종료 되기 전까지 daemon thread는 종료되지 않고 계속해서 뒷배경에서 돈다.
+Daemon thread는 보통 user thread와 같이 작업을 하기 때문에 user thread가 없으면 daemon thread도 같이 종료된다.
+모든 thread 중에서 제일 낮은 우선 순위를 가지게 된다.
 
 <br>
 
@@ -10,10 +21,24 @@ synchronization은 여러 쓰레드가 하나의 기능을 공유할 때 하나�
 <br>
 
 ## context switching
+CPU가 현재 진행 중인 task(프로세스나 쓰레드)의 상태를 저장하고 다른 task로 넘어가 작업을 진행한다.
+진행 정보는 PCB(Process Control Block)에 저장해 Register에 적재한다.
+멀티 태스킹처럼 보이지만 실제로는 여러 task를 왔다 갔다 하면서 중단한 부분부터 일정 기간 동안 작업한다.
+하지만 유저가 보기에는 실시간으로 여러 작업이 한꺼번에 진행된다고 생각할 만큼 빠른 처리 속도를 보인다
+
+대신 context switching은 많은 cost를 요구하는 작업이다. 
+또한 process와 thread가 있다면 process가 더 많은 cost를 요구한다.
+왜냐하면 thread는 stack 외 다른 메모리를 공유하지 않지만 process는 전체 메모리를 공유하기에 불러와야 하는 메모리가 더 많기 때문이다.
+변경되는 부분이 상대적으로 많음.
+
+<br>
+
 ### critical section
 여러 프로세스가 공유하는 단위(섹션)
 이는 synchronized 같은 기능으로 atomicity가 보장되어야지 안정적으로 애플리케이션이 운영된다.
 하나의 프로세스가 critical section에서 진행하고 있으면 다른 프로세스는 해당 critical section에 접근할 수 없다.
+
+<br>
 
 ### mutex
 critical section을 쓸 수 있는 락(lock)
@@ -26,11 +51,22 @@ mutex와 같은 lock 개념으로 wait과 signal 기능을 가진다.
 
 <br>
 
-## IO 블로킹
+## IO
+Java에서 사용하는 Input stream과 Output stream으로 다른 소스에 데이터를 입력 또는 출력할 수 있도록 하는 기능이다.
+
 
 <br>
 
-## Non-blocking IO
+### 블로킹 IO
+
+
+<br>
+
+### Non-blocking IO
+
+
+
+[IO](https://limdongjin.github.io/concepts/blocking-non-blocking-io.html#ibm-%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B5%E1%84%8F%E1%85%B3%E1%86%AF)
 
 <br>
 

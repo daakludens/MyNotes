@@ -57,3 +57,5 @@ null check에 대한 고민들이 Optional로 이어지게 된 거다.
 ### IO operation
 
 <br>
+
+[링크](https://www.javabrahman.com/java-8/java-8-java-util-function-consumer-tutorial-with-examples/#:~:text=Consumer%20is%20an%20in,object%20without%20returning%20any%20result.)

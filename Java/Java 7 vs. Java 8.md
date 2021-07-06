@@ -15,6 +15,7 @@ java.util.function.Consumer 객체를 아규먼트로 받아서 사용한다.
 <br>
 
 ### Functional interface and Lambda expression
+functional interface는 하나의 메서드만 정의 되어 있는 interface를 의미한다. 
 
 <br>
 

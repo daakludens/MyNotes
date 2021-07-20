@@ -1,10 +1,33 @@
-# 객체 지향의 4대 특성
-프로그래밍 기법 중 하나로 객체지향적 프로그래밍이다.
-코드 재사용과 생산성이 확보된다.
+# OOP(Object-Oriented Programming)
+객체지향적 프로그래밍 방식
 
 <br>
 
-### 캡상추다
+## 절차 프로그래밍과 다른 점
+절차 프로그래밍은 일련의 순서에 따라 일을 처리하는 방식이다.
+객체 지향은 객체 간의 관계에 집중해 사람 사고와 비슷하게 프로그래밍한다.
+
+<br>
+
+## 객체지향의 5대원칙 = SOLID
+### S 단일 책임 원칙 (SRP, Single Responsibility Principle)
+객체는 단 하나의 책임만을 가진다.
+
+### O 개방-폐쇄 원칙 (OCP, Open-Closed Principle)
+확장에는 열려 있고 변화에는 닫혀 있어야 한다.
+
+### L 리스코프 치환 원칙 (LSP, Liskov Substitution Principle)
+자식 클래스는 부모 클래스의 기능을 사용할 수 있어야 한다.
+
+### I 인터페이스 분리 원칙 (ISP, Interface Segregation Principle)
+인터페이스를 분리시켜야 한다.
+
+### D 의존 역전 원칙 (DIP, Dependency Inversion Principle)
+의존 관계는 자주 변경되는 존재보다 변화가 거의 없는 존재와 맺어야 한다.
+
+<br>
+
+## 객체 지향의 4대 특성 = 캡상추다
 객체 지향의 4대 특성을 줄인 문장이다.
 캡 : 캡슐화(정보 은닉)
 상 : 상속(재사용)

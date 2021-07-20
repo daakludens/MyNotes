@@ -13,14 +13,22 @@
 ### S 단일 책임 원칙 (SRP, Single Responsibility Principle)
 객체는 단 하나의 책임만을 가진다.
 
+<br>
+
 ### O 개방-폐쇄 원칙 (OCP, Open-Closed Principle)
 확장에는 열려 있고 변화에는 닫혀 있어야 한다.
+
+<br>
 
 ### L 리스코프 치환 원칙 (LSP, Liskov Substitution Principle)
 자식 클래스는 부모 클래스의 기능을 사용할 수 있어야 한다.
 
+<br>
+
 ### I 인터페이스 분리 원칙 (ISP, Interface Segregation Principle)
 인터페이스를 분리시켜야 한다.
+
+<br>
 
 ### D 의존 역전 원칙 (DIP, Dependency Inversion Principle)
 의존 관계는 자주 변경되는 존재보다 변화가 거의 없는 존재와 맺어야 한다.

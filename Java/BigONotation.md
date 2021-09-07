@@ -14,4 +14,5 @@
 
 <br>
 
-## 
+## stack vs queue
+Stack과 Queue의 insert 및 delete 시간이 과연 다를까? -> 같다...

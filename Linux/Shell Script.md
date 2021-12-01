@@ -48,6 +48,10 @@ which java
 java --version
 ```
 
+<br>
+
+ssh를 이용해 각 서버로 들어가서 터미널 명령어를 넣는 것도 가능하다.
+
 [https://codechacha.com/ko/ubuntu-install-open-jdk11/](https://codechacha.com/ko/ubuntu-install-open-jdk11/)
 
 [https://blog.gaerae.com/2015/01/bash-hello-world.html](https://blog.gaerae.com/2015/01/bash-hello-world.html)
